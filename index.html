@@ -686,6 +686,17 @@
   <script src="js/transit.js"></script>
   <script src="/js/wheel.js"></script>
   <script src="/js/setCursorPosition.js"></script>
+  <script type="text/javascript">
+    var posit = 0;
+    var mask = "(+225)0899999999";
+    posit = mask.indexOf("8");
+    $.mask.definitions['8'] = "[1-9]";
+
+    $('input[name="phone"]')
+      .click(function(){$(this)
+        .setCursorPosition(posit);})
+          .mask(mask);
+</script>
 </body>
 
 </html>
